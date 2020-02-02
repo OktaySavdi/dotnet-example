@@ -32,7 +32,7 @@ namespace istioproject
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("This is Project-1");
+                    await context.Response.WriteAsync("This is Project-2");
                 });
             });
         }
