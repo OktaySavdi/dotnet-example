@@ -22,7 +22,7 @@ namespace istioproject
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/",  async context =>
+                endpoints.MapGet("/istio",  async context =>
                 {
                     #region versiyon 1
                     await context.Response.WriteAsync("" + umachine + " | This is Project:1 | CallNumber: " + i++ + "");
