@@ -33,13 +33,13 @@ namespace istioproject
                     #endregion
 
                     #region versiyon 3
-                    Thread.Sleep(5000);
-                    await context.Response.WriteAsync("" + umachine + " | This is Project:3 | CallNumber: " + i++ + "");
+                    //Thread.Sleep(5000);
+                    //await context.Response.WriteAsync("" + umachine + " | This is Project:3 | CallNumber: " + i++ + "");
                     #endregion
 
                     #region versiyon 4
-                    //context.Response.StatusCode = 502;
-                    //await context.Response.WriteAsync("");
+                    context.Response.StatusCode = 502;
+                    await context.Response.WriteAsync("");
                     #endregion
                 });
             });
