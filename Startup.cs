@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Threading;
 
 namespace istioproject
 {
@@ -22,10 +21,10 @@ namespace istioproject
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    Thread.Sleep(5000);
-                    await context.Response.WriteAsync("" + umachine + " | This is Project:3 | CallNumber: " + i++ + "");
+                endpoints.MapGet("/",  async context =>
+                {         
+                    context.Response.StatusCode = 502;
+                    await context.Response.WriteAsync("");
                 });
             });
         }
