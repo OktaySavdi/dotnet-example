@@ -23,7 +23,7 @@ namespace istioproject
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("" + umachine + " | This is Project:1 | CallNumber: " + i++ + "");
+                    await context.Response.WriteAsync("" + umachine + " | This is Project:2 | CallNumber: " + i++ + "");
                 });
             });
         }
