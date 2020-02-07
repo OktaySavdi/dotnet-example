@@ -29,12 +29,12 @@ namespace istioproject
                     #endregion
 
                     #region versiyon 2
-                    await context.Response.WriteAsync("" + umachine + " | This is Project:2 | CallNumber: " + i++ + "");
+                    //await context.Response.WriteAsync("" + umachine + " | This is Project:2 | CallNumber: " + i++ + "");
                     #endregion
 
                     #region versiyon 3
-                    //Thread.Sleep(5000);
-                    //await context.Response.WriteAsync("" + umachine + " | This is Project:3 | CallNumber: " + i++ + "");
+                    Thread.Sleep(5000);
+                    await context.Response.WriteAsync("" + umachine + " | This is Project:3 | CallNumber: " + i++ + "");
                     #endregion
 
                     #region versiyon 4
