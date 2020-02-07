@@ -25,7 +25,7 @@ namespace istioproject
                 endpoints.MapGet("/istio",  async context =>
                 {
                     #region versiyon 1
-                    //await context.Response.WriteAsync("" + umachine + " | This is Project:1 | CallNumber: " + i++ + "");
+                    await context.Response.WriteAsync("" + umachine + " | This is Project:1 | CallNumber: " + i++ + "");
                     #endregion
 
                     #region versiyon 2
@@ -38,8 +38,8 @@ namespace istioproject
                     #endregion
 
                     #region versiyon 4
-                    context.Response.StatusCode = 502;
-                    await context.Response.WriteAsync("");
+                    //context.Response.StatusCode = 502;
+                    //await context.Response.WriteAsync("");
                     #endregion
                 });
             });
