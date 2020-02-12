@@ -25,11 +25,11 @@ namespace istioproject
                 endpoints.MapGet("/istio",  async context =>
                 {
                     #region versiyon 1
-                    await context.Response.WriteAsync("" + umachine + " | This is Project:1 | CallNumber: " + i++ + "");
+                    //await context.Response.WriteAsync("" + umachine + " | This is Project:1 | CallNumber: " + i++ + "");
                     #endregion
 
                     #region versiyon 2
-                    //await context.Response.WriteAsync("" + umachine + " | This is Project:2 | CallNumber: " + i++ + "");
+                    await context.Response.WriteAsync("" + umachine + " | This is Project:2 | CallNumber: " + i++ + "");
                     #endregion
 
                     #region versiyon 3
