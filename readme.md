@@ -4,11 +4,14 @@ we will use the images created here istio-example [istio-example](https://github
 
 
 #  Build
-
-       docker build -t istioproject:v1 -f Dockerfile .
-
+````
+docker build -t istioproject:v1 -f Dockerfile .
+````
 # Run
-    docker run -d -p 5000:80 --name myapp istioproject:v1
-
+````
+docker run -d -p 5000:80 --name myapp istioproject:v1
+````
 # Call
-    curl http://localhost:5000/istio
+````
+curl http://localhost:5000/istio
+````
