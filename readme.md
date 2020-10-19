@@ -9,7 +9,7 @@ docker build -t istioproject:v1 -f Dockerfile .
 ````
 # Run
 ````
-docker run -d -p 5000:80 --name myapp istioproject:v1
+docker run -d -p 5000:8080 --name myapp istioproject:v1
 ````
 # Call
 ````
