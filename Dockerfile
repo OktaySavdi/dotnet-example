@@ -12,5 +12,8 @@ FROM registry.redhat.io/rhel8/dotnet-31-runtime
 USER 0
 COPY --from=build-env /opt/app-root/app .
 RUN chown -R 1001:0 /opt/app-root && fix-permissions /opt/app-root
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl --fail http://localhost:8080/istio || exit 1
 USER 1001
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "istioproject.dll"]
